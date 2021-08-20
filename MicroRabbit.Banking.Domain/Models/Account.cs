@@ -1,4 +1,4 @@
-﻿namespace MicroRabbit.Banking.Domain.Model
+﻿namespace MicroRabbit.Banking.Domain.Models
 {
     public class Account
     {

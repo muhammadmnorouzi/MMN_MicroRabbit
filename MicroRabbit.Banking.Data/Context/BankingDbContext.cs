@@ -1,4 +1,4 @@
-﻿using MicroRabbit.Banking.Domain.Model;
+﻿using MicroRabbit.Banking.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
 

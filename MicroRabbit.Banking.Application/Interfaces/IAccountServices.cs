@@ -1,14 +1,14 @@
-﻿using MicroRabbit.Banking.Domain.Model;
-using System;
+﻿using MicroRabbit.Banking.Application.Models;
+using MicroRabbit.Banking.Domain.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MicroRabbit.Banking.Application.Interfaces
 {
     public interface IAccountServices
     {
         IEnumerable<Account> GetAccounts();
+        void Transfer(AccountTransfer accountTransfer);
+        void AddAccount(Account account);
+        bool SaveChanges();
     }
 }

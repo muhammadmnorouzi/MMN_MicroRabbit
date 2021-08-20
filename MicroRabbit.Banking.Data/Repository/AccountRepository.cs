@@ -1,6 +1,6 @@
 ﻿using MicroRabbit.Banking.Data.Context;
 using MicroRabbit.Banking.Domain.Interfaces;
-using MicroRabbit.Banking.Domain.Model;
+using MicroRabbit.Banking.Domain.Models;
 using System.Collections.Generic;
 
 namespace MicroRabbit.Banking.Data.Repository
@@ -14,9 +14,19 @@ namespace MicroRabbit.Banking.Data.Repository
             _context = context;
         }
 
+        public void AddAccount(Account account)
+        {
+            _context.Accounts.Add(account);
+        }
+
         public IEnumerable<Account> GetAccounts()
         {
             return _context.Accounts;
+        }
+
+        public bool SaveChanges()
+        {
+            return _context.SaveChanges() > 0;
         }
     }
 }

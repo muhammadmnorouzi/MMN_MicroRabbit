@@ -1,4 +1,4 @@
-﻿using MicroRabbit.Banking.Domain.Model;
+﻿using MicroRabbit.Banking.Domain.Models;
 using System.Collections.Generic;
 
 namespace MicroRabbit.Banking.Domain.Interfaces
@@ -6,5 +6,7 @@ namespace MicroRabbit.Banking.Domain.Interfaces
     public interface IAccountRepository
     {
         IEnumerable<Account> GetAccounts();
+        void AddAccount(Account account);
+        bool SaveChanges();
     }
 }
