@@ -1,4 +1,4 @@
-﻿namespace MicroRabbit.Transfer.Domain.Dtos
+﻿namespace MicroRabbit.Transfer.Api.Dtos
 {
     public class TransferLogDto
     {

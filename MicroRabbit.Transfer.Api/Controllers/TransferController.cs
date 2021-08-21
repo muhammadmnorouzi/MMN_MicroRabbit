@@ -1,6 +1,5 @@
-﻿using MicroRabbit.Transfer.Api.Controllers;
+﻿using MicroRabbit.Transfer.Api.Dtos;
 using MicroRabbit.Transfer.Application.Interfaces;
-using MicroRabbit.Transfer.Domain.Dtos;
 using MicroRabbit.Transfer.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +20,7 @@ namespace MicroRabbit.Transfer.Api.Controllers
             return Ok(_transferService.GetTransferLogs());
         }
 
+        ///This action is for testing and seeding some data
         [HttpPost("add-transfer-log")]
         public ActionResult<TransferLog> AddTransferLogAction([FromBody]TransferLogDto transferLogDto)
         {
@@ -37,11 +37,5 @@ namespace MicroRabbit.Transfer.Api.Controllers
 
             return BadRequest("Failed To Add TransferLog");
         }
-
-        //[HttpGet("get-transfer-logs")]
-        //public ActionResult<TransferLog> GetTransferLogsAction()
-        //{
-        //    return Ok(_transferService.GetTransferLogs());
-        //}
     }
 }
